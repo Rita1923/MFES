@@ -1,0 +1,30 @@
+class Block
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+-- TODO Define instance variables here
+		public semaphore: seq of char;
+			--red: can’t enter the block
+			--yellow: can enter the block but be prepared to stop at next semaphore 
+			--green: can proceed normally (next semaphore cannot be red)
+operations
+-- TODO Define operations here
+
+public Block(l:seq of char) res:Semaphore==(
+EnterLightEvent(l);
+return self;
+);
+
+public EnterLightEvent: seq of char ==> ()
+	EnterLightEvent(x) == (
+	light:=x;
+	)
+	pre x in set {"red","yellow","green"};
+
+functions
+-- TODO Define functiones here
+traces
+-- TODO Define Combinatorial Test Traces here
+end Block

@@ -1,0 +1,32 @@
+class Train
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+	public semaphore: seq of char;
+	public at_station: bool;
+	public direction: nat := 0;
+	public request_permission: bool;
+operations
+-- TODO Define operations here
+
+public Train() res:Train==(
+	at_station := false;
+	request_permission := false;
+return self;
+);
+
+public EnterSemaphoreEvent: seq of char ==> ()
+	EnterSemaphoreEvent(x) == (
+	train:=x;
+	)
+	pre x in set {"high","medium","stopped"};
+	
+	
+
+functions
+-- TODO Define functiones here
+traces
+-- TODO Define Combinatorial Test Traces here
+end Train
